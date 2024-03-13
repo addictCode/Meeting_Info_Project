@@ -160,7 +160,7 @@ void makeHttpPostRequest(String token) {
   int index2 = 0;
 
   // Specify the target URL
-  String url = "http://k3cloud.seeed.cc:8098/api/HA/GetMeetingBookInfo";
+  String url = "you need to put your access url here";
   
 //-----------------------------------------http1-----------------------------------------
   // Start the HTTP POST request
@@ -294,20 +294,6 @@ void makeHttpPostRequest(String token) {
     EPD_Display(BlackImage);//Display GUI image.
     EPD_DeepSleep(); //EPD_DeepSleep,Sleep instruction is necessary, please do not delete!!!
     delay(2000); //Delay for 2s.
-  }
-
-  //to free memory
-  for (int i = 0; i < index1; i++) {
-      free(infoItem1[i].startTime);
-      free(infoItem1[i].endTime);
-      infoItem1[i].startTime = NULL;
-      infoItem1[i].endTime = NULL;
-  }
-  for (int i = 0; i < index2; i++) {
-      free(infoItem2[i].startTime);
-      free(infoItem2[i].endTime);
-      infoItem1[i].startTime = NULL;
-      infoItem1[i].endTime = NULL;
   }
 }
 
